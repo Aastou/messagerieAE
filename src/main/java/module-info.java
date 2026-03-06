@@ -3,6 +3,8 @@ module sn.messagerieae {
     requires javafx.fxml;
     requires static lombok;
     requires jakarta.persistence;
+    requires jbcrypt;
+    requires org.slf4j;
 
 
     opens sn.messagerieae to javafx.fxml;
