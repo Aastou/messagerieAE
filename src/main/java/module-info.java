@@ -5,6 +5,7 @@ module sn.messagerieae {
     requires jakarta.persistence;
     requires jbcrypt;
     requires org.slf4j;
+    requires com.google.gson;
 
 
     opens sn.messagerieae to javafx.fxml;
