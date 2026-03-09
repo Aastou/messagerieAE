@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <!-- ===== Console ===== -->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) %cyan(%logger{20}) - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- ===== Fichier principal (toutes les logs) ===== -->
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/messagerie.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>logs/messagerie-%d{yyyy-MM-dd}.log</fileNamePattern>
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- ===== Fichier dédié aux événements serveur (RG12) ===== -->
+  <appender name="SERVER_EVENTS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/server-events.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>logs/server-events-%d{yyyy-MM-dd}.log</fileNamePattern>
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} | %-5level | %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Logger spécifique pour le serveur et les handlers -->
+  <logger name="sn.messagerieae.server" level="INFO" additivity="true">
+    <appender-ref ref="SERVER_EVENTS"/>
+  </logger>
+  <logger name="sn.messagerieae.service.AuthService" level="INFO" additivity="true">
+    <appender-ref ref="SERVER_EVENTS"/>
+  </logger>
+  <logger name="sn.messagerieae.service.MessageService" level="INFO" additivity="true">
+    <appender-ref ref="SERVER_EVENTS"/>
+  </logger>
+
+  <!-- Réduire les logs Hibernate -->
+  <logger name="org.hibernate" level="WARN"/>
+  <logger name="org.hibernate.SQL" level="DEBUG"/>
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+    <appender-ref ref="FILE"/>
+  </root>
+
+</configuration>
