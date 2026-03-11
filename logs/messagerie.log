@@ -133,3 +133,5 @@ java.lang.IllegalStateException: Cannot get a connection as the driver manager i
 2026-03-11 01:23:46.607 [Thread-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08004
 2026-03-11 01:23:46.608 [Thread-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - The server requested SCRAM-based authentication, but the password is an empty string.
 2026-03-11 01:25:50.932 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-11 01:27:22.582 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-11 01:27:22.584 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
