@@ -1,0 +1,14 @@
+2026-03-11 01:05:01.591 | INFO  | ========================================
+2026-03-11 01:05:01.602 | INFO  |   Serveur démarré sur le port 5555
+2026-03-11 01:05:01.610 | INFO  |   En attente de connexions...
+2026-03-11 01:05:01.610 | INFO  | ========================================
+2026-03-11 01:05:46.214 | INFO  | Nouvelle connexion depuis : /127.0.0.1:61314
+2026-03-11 01:09:22.205 | WARN  | Perte de connexion pour : inconnu
+2026-03-11 01:09:46.325 | INFO  | Nouvelle connexion depuis : /127.0.0.1:55654
+2026-03-11 01:23:17.242 | INFO  | Arrêt en cours...
+2026-03-11 01:23:17.249 | INFO  | Serveur arrêté
+2026-03-11 01:23:24.460 | INFO  | ========================================
+2026-03-11 01:23:24.462 | INFO  |   Serveur démarré sur le port 5555
+2026-03-11 01:23:24.465 | INFO  |   En attente de connexions...
+2026-03-11 01:23:24.466 | INFO  | ========================================
+2026-03-11 01:23:31.017 | INFO  | Nouvelle connexion depuis : /127.0.0.1:65047

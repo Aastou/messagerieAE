@@ -8,6 +8,7 @@ module sn.messagerieae {
     requires com.google.gson;
 
     opens sn.messagerieae.controller to javafx.fxml;
+    opens sn.messagerieae.protocol to com.google.gson;
     //opens sn.messagerieae to javafx.fxml;
     exports sn.messagerieae;
 }

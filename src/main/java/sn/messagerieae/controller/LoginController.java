@@ -39,6 +39,8 @@ public class LoginController implements MessageListener {
         }
         hideError();
         client.sendLogin(username, password);
+
+        SceneManager.switchTo("chat.fxml", "Messagerie - Chat");
     }
 
     @FXML

@@ -1,31 +1,135 @@
-2026-03-10 23:56:24.496 [JavaFX Application Thread] ERROR sn.messagerieae.client.SceneManager - Erreur chargement vue : login.fxml
-javafx.fxml.LoadException: 
-/C:/Users/Lenovo/IdeaProjects/messagerieAE/target/classes/sn/messagerieae/views/login.fxml:10
-
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:946)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:983)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:757)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2853)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
-	at sn.messagerieae/sn.messagerieae.client.SceneManager.switchTo(SceneManager.java:30)
-	at sn.messagerieae/sn.messagerieae.MainApp.start(MainApp.java:23)
-	at javafx.graphics@21.0.6/com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$9(LauncherImpl.java:839)
-	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runAndWait$12(PlatformImpl.java:483)
-	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:456)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.6/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:455)
-	at javafx.graphics@21.0.6/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
-	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.6/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+2026-03-11 00:55:48.779 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-11 00:56:27.706 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-11 00:56:33.823 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-11 01:03:10.360 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-11 01:05:01.591 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-11 01:05:01.602 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-11 01:05:01.610 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-11 01:05:01.610 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-11 01:05:46.214 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:61314
+2026-03-11 01:05:46.215 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-11 01:05:47.005 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-11 01:09:22.205 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : inconnu
+2026-03-11 01:09:46.325 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:55654
+2026-03-11 01:09:46.328 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-11 01:09:47.225 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-11 01:18:55.143 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-11 01:23:17.242 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-11 01:23:17.249 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-11 01:23:18.125 [Thread-0] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-11 01:23:18.131 [Thread-0] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-11 01:23:18.273 [Thread-0] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:259)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:132)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:55)
+	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:13)
+	at sn.messagerieae/sn.messagerieae.server.Server.lambda$main$1(Server.java:119)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.lang.IllegalAccessException: class javafx.fxml.FXMLLoader$ValueElement (in module javafx.fxml) cannot access class sn.messagerieae.controller.LoginController (in module sn.messagerieae) because module sn.messagerieae does not export sn.messagerieae.controller to module javafx.fxml
-	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394)
-	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:714)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:495)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at javafx.fxml@21.0.6/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:941)
-	... 18 common frames omitted
+2026-03-11 01:23:18.309 [Thread-0] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11 01:23:18.321 [Thread-0] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08004
+2026-03-11 01:23:18.321 [Thread-0] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - The server requested SCRAM-based authentication, but the password is an empty string.
+2026-03-11 01:23:24.460 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-11 01:23:24.462 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-11 01:23:24.465 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-11 01:23:24.466 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-11 01:23:31.017 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:65047
+2026-03-11 01:23:31.020 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-11 01:23:32.093 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-11 01:23:45.880 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie - Chat
+2026-03-11 01:23:46.377 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-11 01:23:46.383 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-11 01:23:46.535 [Thread-1] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:259)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:132)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:55)
+	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:13)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.findByUsername(UserDAO.java:44)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.login(AuthService.java:57)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleLogin(ClientHandler.java:118)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-11 01:23:46.581 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11 01:23:46.607 [Thread-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08004
+2026-03-11 01:23:46.608 [Thread-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - The server requested SCRAM-based authentication, but the password is an empty string.
+2026-03-11 01:25:50.932 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
