@@ -8,12 +8,14 @@ import com.google.gson.stream.JsonWriter;
 import lombok.Getter;
 import lombok.Setter;
 
+
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Setter
 @Getter
+
 public class ProtocolMessage {
 
     // ===== Types de commandes =====

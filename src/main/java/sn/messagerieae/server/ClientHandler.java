@@ -12,10 +12,13 @@ import sn.messagerieae.service.AuthService;
 import sn.messagerieae.service.MessageService;
 import sn.messagerieae.service.UserService;
 
+
 import java.io.*;
 import java.net.Socket;
 import java.util.List;
 import java.util.Map;
+
+import static sn.messagerieae.protocol.ProtocolMessage.Command.*;
 
 public class ClientHandler implements Runnable {
 
@@ -26,6 +29,9 @@ public class ClientHandler implements Runnable {
     private PrintWriter output;
     private String username;
     private User currentUser;
+
+    private volatile boolean alive = true;
+    private long lastActivity = System.currentTimeMillis();
 
     // Référence vers la map globale des clients connectés
     private final Map<String, ClientHandler> connectedClients;
@@ -55,6 +61,7 @@ public class ClientHandler implements Runnable {
 
             String line;
             while ((line = input.readLine()) != null) {
+                lastActivity = System.currentTimeMillis();
                 try {
                     ProtocolMessage request = ProtocolMessage.fromJson(line);
                     handleRequest(request);
@@ -65,6 +72,7 @@ public class ClientHandler implements Runnable {
         } catch (IOException e) {
             logger.warn("Perte de connexion pour : {}", username != null ? username : "inconnu");
         } finally {
+            alive = false;
             disconnect();
         }
     }
@@ -123,7 +131,7 @@ public class ClientHandler implements Runnable {
             List<Message> pending = messageService.deliverPendingMessages(user.getId());
             for (Message msg : pending) {
                 ProtocolMessage incoming = new ProtocolMessage();
-                incoming.setCommand(Command.INCOMING_MESSAGE);
+                incoming.setCommand(ProtocolMessage.Command.INCOMING_MESSAGE);
                 incoming.setSender(msg.getSender().getUsername());
                 incoming.setContent(msg.getContenu());
                 incoming.setExtra(msg.getDateEnvoi().toString());
@@ -190,7 +198,7 @@ public class ClientHandler implements Runnable {
 
             String otherUsername = request.getReceiver();
             User otherUser = userService.findByUsername(otherUsername)
-                .orElseThrow(() -> new IllegalArgumentException("Utilisateur introuvable : " + otherUsername));
+                    .orElseThrow(() -> new IllegalArgumentException("Utilisateur introuvable : " + otherUsername));
 
             List<Message> history = messageService.getConversation(currentUser.getId(), otherUser.getId());
 
@@ -199,14 +207,14 @@ public class ClientHandler implements Runnable {
 
             // Construire la réponse avec la liste des messages
             List<MessageDTO> dtos = history.stream()
-                .map(m -> new MessageDTO(
-                    m.getId(),
-                    m.getSender().getUsername(),
-                    m.getReceiver().getUsername(),
-                    m.getContenu(),
-                    m.getDateEnvoi().toString(),
-                    m.getStatut().name()))
-                .toList();
+                    .map(m -> new MessageDTO(
+                            m.getId(),
+                            m.getSender().getUsername(),
+                            m.getReceiver().getUsername(),
+                            m.getContenu(),
+                            m.getDateEnvoi().toString(),
+                            m.getStatut().name()))
+                    .toList();
 
             Gson gson = new ProtocolMessage().getGson();
             ProtocolMessage response = new ProtocolMessage();
@@ -227,9 +235,9 @@ public class ClientHandler implements Runnable {
         }
 
         List<String> onlineUsernames = userService.getOnlineUsers().stream()
-            .map(User::getUsername)
-            .filter(u -> !u.equals(username)) // exclure soi-même
-            .toList();
+                .map(User::getUsername)
+                .filter(u -> !u.equals(username)) // exclure soi-même
+                .toList();
 
         Gson gson = new ProtocolMessage().getGson();
         ProtocolMessage response = new ProtocolMessage();
@@ -249,13 +257,13 @@ public class ClientHandler implements Runnable {
             List<User> allMembers = userService.getAllMembers(currentUser);
 
             List<MemberDTO> dtos = allMembers.stream()
-                .map(u -> new MemberDTO(
-                    u.getId(),
-                    u.getUsername(),
-                    u.getRole().name(),
-                    u.getStatus().name(),
-                    u.getDateCreation().toString()))
-                .toList();
+                    .map(u -> new MemberDTO(
+                            u.getId(),
+                            u.getUsername(),
+                            u.getRole().name(),
+                            u.getStatus().name(),
+                            u.getDateCreation().toString()))
+                    .toList();
 
             Gson gson = new ProtocolMessage().getGson();
             ProtocolMessage response = new ProtocolMessage();
@@ -303,8 +311,8 @@ public class ClientHandler implements Runnable {
         notification.setSender(user);
 
         connectedClients.values().stream()
-            .filter(client -> !client.getUsername().equals(user))
-            .forEach(client -> client.sendResponse(notification));
+                .filter(client -> !client.getUsername().equals(user))
+                .forEach(client -> client.sendResponse(notification));
     }
 
     public String getUsername() {
@@ -317,4 +325,21 @@ public class ClientHandler implements Runnable {
 
     private record MemberDTO(Long id, String username, String role,
                              String status, String dateCreation) {}
+
+
+    public boolean isAlive() {
+        if (!alive || socket.isClosed()) return false;
+        return (System.currentTimeMillis() - lastActivity) < 120_000;
+    }
+
+    public void close() {
+        alive = false;
+        try {
+            if (!socket.isClosed()) {
+                socket.close();
+            }
+        } catch (IOException e) {
+            logger.error("Erreur fermeture socket pour {}", username, e);
+        }
+    }
 }

@@ -9,7 +9,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "users")
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(exclude = "password")
@@ -49,5 +50,9 @@ public class User {
         this.username = username;
         this.password = password;
         this.role = role;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

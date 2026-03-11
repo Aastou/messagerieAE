@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="800" prefHeight="600"
+            styleClass="chat-container"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sn.messagerieae.controller.ChatController">
+
+    <!-- En-tête -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="chat-header">
+            <padding>
+                <Insets top="10" right="15" bottom="10" left="15"/>
+            </padding>
+            <Label fx:id="currentUserLabel" styleClass="header-username"/>
+            <Label fx:id="roleLabel" styleClass="header-role"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="allMembersBtn"
+                    text="Tous les membres"
+                    onAction="#handleGetAllMembers"
+                    styleClass="btn-secondary"
+                    visible="false" managed="false"/>
+            <Button text="Déconnexion"
+                    onAction="#handleLogout"
+                    styleClass="btn-danger"/>
+        </HBox>
+    </top>
+
+    <!-- Sidebar -->
+    <left>
+        <VBox prefWidth="200" styleClass="sidebar">
+            <HBox alignment="CENTER_LEFT" spacing="8" styleClass="sidebar-header">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label text="En ligne" styleClass="sidebar-title"/>
+                <Label fx:id="onlineCountLabel" styleClass="online-count"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="↻"
+                        onAction="#handleRefreshUsers"
+                        styleClass="btn-refresh"/>
+            </HBox>
+            <ListView fx:id="usersListView"
+                      VBox.vgrow="ALWAYS"
+                      styleClass="users-list"/>
+        </VBox>
+    </left>
+
+    <!-- Conversation -->
+    <center>
+        <VBox>
+            <HBox fx:id="conversationHeader"
+                  alignment="CENTER_LEFT"
+                  styleClass="conversation-header"
+                  visible="false" managed="false">
+                <padding>
+                    <Insets top="8" right="15" bottom="8" left="15"/>
+                </padding>
+                <Label fx:id="chattingWithLabel" styleClass="chatting-with"/>
+            </HBox>
+            <ScrollPane fx:id="messagesScrollPane"
+                        fitToWidth="true"
+                        VBox.vgrow="ALWAYS"
+                        styleClass="messages-area">
+                <VBox fx:id="messagesContainer" spacing="8"
+                      styleClass="messages-container">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                </VBox>
+            </ScrollPane>
+            <HBox fx:id="inputArea" spacing="10"
+                  alignment="CENTER" styleClass="input-area"
+                  visible="false" managed="false">
+                <padding>
+                    <Insets top="10" right="15" bottom="10" left="15"/>
+                </padding>
+                <TextField fx:id="messageField"
+                           promptText="Tapez votre message..."
+                           HBox.hgrow="ALWAYS"
+                           styleClass="message-input"
+                           onAction="#handleSendMessage"/>
+                <Label fx:id="charCountLabel" text="0/1000"
+                       styleClass="char-count"/>
+                <Button text="Envoyer"
+                        onAction="#handleSendMessage"
+                        styleClass="btn-primary"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
