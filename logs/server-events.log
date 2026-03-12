@@ -578,3 +578,36 @@ java.lang.ExceptionInInitializerError: Échec JPA — Unable to create requested
 2026-03-12 21:08:00.756 | WARN  | Perte de connexion pour : inconnu
 2026-03-12 21:08:05.136 | INFO  | Arrêt en cours...
 2026-03-12 21:08:05.137 | INFO  | Serveur arrêté
+2026-03-12 22:10:30.823 | INFO  | ========================================
+2026-03-12 22:10:30.824 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 22:10:30.826 | INFO  |   En attente de connexions...
+2026-03-12 22:10:30.826 | INFO  | ========================================
+2026-03-12 22:10:41.556 | INFO  | Nouvelle connexion depuis : /127.0.0.1:61547
+2026-03-12 22:11:00.818 | INFO  | Connexion : yaya (rôle : MEMBRE)
+2026-03-12 22:11:00.884 | INFO  | Connexion : yaya
+2026-03-12 22:11:31.251 | INFO  | Déconnexion : yaya
+2026-03-12 22:11:31.252 | INFO  | Déconnexion : yaya
+2026-03-12 22:11:31.253 | WARN  | Perte de connexion pour : yaya
+2026-03-12 22:11:31.268 | INFO  | Déconnexion : yaya
+2026-03-12 22:11:31.269 | INFO  | Déconnexion : yaya
+2026-03-12 22:44:13.245 | INFO  | Nouvelle connexion depuis : /127.0.0.1:64418
+2026-03-12 22:44:23.256 | INFO  | Connexion : astou (rôle : BENEVOLE)
+2026-03-12 22:44:23.260 | INFO  | Connexion : astou
+2026-03-12 22:44:33.343 | INFO  | Message envoyé : astou → mado (id: 12)
+2026-03-12 22:44:33.346 | INFO  | Message : astou → mado
+2026-03-12 22:44:36.427 | INFO  | Déconnexion : astou
+2026-03-12 22:44:36.427 | INFO  | Déconnexion : astou
+2026-03-12 22:44:36.428 | WARN  | Perte de connexion pour : astou
+2026-03-12 22:44:36.441 | INFO  | Déconnexion : astou
+2026-03-12 22:44:36.442 | INFO  | Déconnexion : astou
+2026-03-12 22:44:45.712 | INFO  | Nouvelle connexion depuis : /127.0.0.1:64422
+2026-03-12 22:44:45.861 | INFO  | Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 22:44:45.881 | INFO  | 1 message(s) en attente livré(s) à l'utilisateur id=5
+2026-03-12 22:44:45.882 | INFO  | Connexion : mado
+2026-03-12 22:44:56.023 | INFO  | Déconnexion : mado
+2026-03-12 22:44:56.023 | INFO  | Déconnexion : mado
+2026-03-12 22:44:56.024 | WARN  | Perte de connexion pour : mado
+2026-03-12 22:44:56.033 | INFO  | Déconnexion : mado
+2026-03-12 22:44:56.034 | INFO  | Déconnexion : mado
+2026-03-12 22:54:16.434 | INFO  | Arrêt en cours...
+2026-03-12 22:54:16.436 | INFO  | Serveur arrêté
