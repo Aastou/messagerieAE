@@ -152,10 +152,10 @@
         <version>3.3.0</version>
         <configuration>
           <mainClass>sn.messagerieae.server.Server</mainClass>
-          <jvmArgs>
-            <jvmArg>--add-reads</jvmArg>
-            <jvmArg>sn.messagerieae=ALL-UNNAMED</jvmArg>
-          </jvmArgs>
+<!--          <jvmArgs>-->
+<!--            <jvmArg>&#45;&#45;add-reads</jvmArg>-->
+<!--            <jvmArg>sn.messagerieae=ALL-UNNAMED</jvmArg>-->
+<!--          </jvmArgs>-->
         </configuration>
       </plugin>
 

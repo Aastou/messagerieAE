@@ -561,3 +561,20 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 2026-03-12 16:20:05.341 | INFO  | Nouvelle connexion depuis : /127.0.0.1:57140
 2026-03-12 16:23:28.728 | INFO  | Arrêt en cours...
 2026-03-12 16:23:28.733 | INFO  | Serveur arrêté
+2026-03-12 21:07:31.874 | INFO  | ========================================
+2026-03-12 21:07:31.875 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 21:07:31.876 | INFO  |   En attente de connexions...
+2026-03-12 21:07:31.877 | INFO  | ========================================
+2026-03-12 21:07:40.963 | INFO  | Nouvelle connexion depuis : /127.0.0.1:51663
+2026-03-12 21:07:52.190 | ERROR | Erreur lors du traitement de la requête
+java.lang.ExceptionInInitializerError: Échec JPA — Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver#connect [Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [null] | Cause racine : Connection refused: no further information
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.findByUsername(UserDAO.java:44)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.login(AuthService.java:57)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleLogin(ClientHandler.java:119)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:85)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-12 21:08:00.756 | WARN  | Perte de connexion pour : inconnu
+2026-03-12 21:08:05.136 | INFO  | Arrêt en cours...
+2026-03-12 21:08:05.137 | INFO  | Serveur arrêté
