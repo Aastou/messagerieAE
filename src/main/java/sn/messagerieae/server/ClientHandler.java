@@ -65,8 +65,9 @@ public class ClientHandler implements Runnable {
                 try {
                     ProtocolMessage request = ProtocolMessage.fromJson(line);
                     handleRequest(request);
-                } catch (Exception e) {
-                    sendResponse(ProtocolMessage.error("Requête invalide : " + e.getMessage()));
+                } catch (Throwable e) {
+                    logger.error("Erreur lors du traitement de la requête", e);
+                    sendResponse(ProtocolMessage.error("Erreur serveur : " + e.getMessage()));
                 }
             }
         } catch (IOException e) {

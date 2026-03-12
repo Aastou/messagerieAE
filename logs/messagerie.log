@@ -1,84 +1,23 @@
-2026-03-11 00:55:48.779 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
-2026-03-11 00:56:27.706 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
-2026-03-11 00:56:33.823 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
-2026-03-11 01:03:10.360 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
-2026-03-11 01:05:01.591 [main] INFO  sn.messagerieae.server.Server - ========================================
-2026-03-11 01:05:01.602 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
-2026-03-11 01:05:01.610 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
-2026-03-11 01:05:01.610 [main] INFO  sn.messagerieae.server.Server - ========================================
-2026-03-11 01:05:46.214 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:61314
-2026-03-11 01:05:46.215 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
-2026-03-11 01:05:47.005 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
-2026-03-11 01:09:22.205 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : inconnu
-2026-03-11 01:09:46.325 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:55654
-2026-03-11 01:09:46.328 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
-2026-03-11 01:09:47.225 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
-2026-03-11 01:18:55.143 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
-2026-03-11 01:23:17.242 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
-2026-03-11 01:23:17.249 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
-2026-03-11 01:23:18.125 [Thread-0] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
-2026-03-11 01:23:18.131 [Thread-0] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
-2026-03-11 01:23:18.273 [Thread-0] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
-java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:259)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:132)
-	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43)
-	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61)
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499)
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372)
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550)
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102)
-	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
-	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
-	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
-	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
-	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:55)
-	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
-	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
-	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:13)
-	at sn.messagerieae/sn.messagerieae.server.Server.lambda$main$1(Server.java:119)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-03-11 01:23:18.309 [Thread-0] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-11 01:23:18.321 [Thread-0] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08004
-2026-03-11 01:23:18.321 [Thread-0] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - The server requested SCRAM-based authentication, but the password is an empty string.
-2026-03-11 01:23:24.460 [main] INFO  sn.messagerieae.server.Server - ========================================
-2026-03-11 01:23:24.462 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
-2026-03-11 01:23:24.465 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
-2026-03-11 01:23:24.466 [main] INFO  sn.messagerieae.server.Server - ========================================
-2026-03-11 01:23:31.017 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:65047
-2026-03-11 01:23:31.020 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
-2026-03-11 01:23:32.093 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
-2026-03-11 01:23:45.880 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie - Chat
-2026-03-11 01:23:46.377 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
-2026-03-11 01:23:46.383 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
-2026-03-11 01:23:46.535 [Thread-1] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+2026-03-12 00:04:28.120 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:04:28.143 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 00:04:28.143 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 00:04:28.143 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:04:53.871 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:55973
+2026-03-12 00:04:53.873 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 00:04:54.756 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 00:11:34.570 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : inconnu
+2026-03-12 00:11:35.868 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 00:11:35.876 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 00:19:10.661 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:19:10.678 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 00:19:10.678 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 00:19:10.678 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:19:20.579 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:49167
+2026-03-12 00:19:20.582 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 00:19:21.354 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 00:20:39.711 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 00:20:39.717 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 00:20:39.913 [Thread-1] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
 java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
 	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:259)
 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
@@ -129,9 +68,411 @@ java.lang.IllegalStateException: Cannot get a connection as the driver manager i
 	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
 	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-03-11 01:23:46.581 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-11 01:23:46.607 [Thread-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08004
-2026-03-11 01:23:46.608 [Thread-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - The server requested SCRAM-based authentication, but the password is an empty string.
-2026-03-11 01:25:50.932 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
-2026-03-11 01:27:22.582 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
-2026-03-11 01:27:22.584 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 00:20:39.973 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 00:20:40.003 [Thread-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08004
+2026-03-12 00:20:40.004 [Thread-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - The server requested SCRAM-based authentication, but the password is an empty string.
+2026-03-12 00:21:08.218 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 00:21:57.548 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 00:21:57.575 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 00:24:53.260 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:24:53.260 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 00:24:53.260 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 00:24:53.260 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:25:03.981 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:62800
+2026-03-12 00:25:03.983 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 00:25:04.743 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 00:25:07.343 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 00:25:21.414 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 00:25:21.425 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 00:25:21.542 [Thread-1] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:259)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:132)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:55)
+	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
+	at jakarta.persistence@3.1.0/jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:13)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:102)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:83)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-12 00:25:21.578 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 00:25:21.600 [Thread-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08004
+2026-03-12 00:25:21.601 [Thread-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - The server requested SCRAM-based authentication, but the password is an empty string.
+2026-03-12 00:25:38.417 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 00:25:59.182 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 00:25:59.186 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 00:37:20.643 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:37:20.644 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 00:37:20.645 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 00:37:20.645 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:37:34.462 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:54445
+2026-03-12 00:37:34.464 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 00:37:35.078 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 00:37:44.087 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 00:38:08.365 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 00:38:08.370 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 00:38:08.872 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 00:49:12.729 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 00:49:12.731 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 00:49:56.305 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:49:56.307 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 00:49:56.307 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 00:49:56.307 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:50:11.624 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:55406
+2026-03-12 00:50:11.625 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 00:50:12.238 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 00:50:32.134 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 00:50:44.611 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 00:50:44.615 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 00:50:44.994 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 00:50:45.322 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-12 00:50:45.343 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:45.346 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:45.349 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:45.351 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:45.529 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:45.713 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:45.884 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:46.227 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:50:46.454 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : Unable to make protected void sn.messagerieae.model.Message.onSend() accessible: module sn.messagerieae does not "opens sn.messagerieae.model" to unnamed module @6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	... 6 common frames omitted
+2026-03-12 00:54:02.876 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 00:54:02.880 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 00:54:28.144 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:54:28.145 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 00:54:28.146 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 00:54:28.147 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:54:41.950 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:58125
+2026-03-12 00:54:41.952 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 00:54:42.609 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 00:54:46.553 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 00:55:03.648 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 00:55:03.652 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 00:55:04.106 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 00:55:05.082 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.ExceptionInInitializerError: Échec d'initialisation de l'EntityManagerFactory : [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:15)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-12 00:58:57.263 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : inconnu
+2026-03-12 00:58:57.264 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 00:59:27.480 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 00:59:27.482 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 00:59:30.737 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:59:30.738 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 00:59:30.739 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 00:59:30.739 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 00:59:40.481 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:57475
+2026-03-12 00:59:40.482 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 00:59:41.091 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 00:59:44.493 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 01:00:14.952 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 01:00:14.956 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 01:00:15.311 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 01:00:16.608 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$lMfznROV (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x7c552fe1) because module sn.messagerieae does not read unnamed module @0x7c552fe1
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-12 01:00:16.623 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$lMfznROV (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x7c552fe1) because module sn.messagerieae does not read unnamed module @0x7c552fe1 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:00:16.625 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$lMfznROV (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x7c552fe1) because module sn.messagerieae does not read unnamed module @0x7c552fe1 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:00:16.774 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$lMfznROV (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x7c552fe1) because module sn.messagerieae does not read unnamed module @0x7c552fe1 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:00:16.952 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$lMfznROV (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x7c552fe1) because module sn.messagerieae does not read unnamed module @0x7c552fe1 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:00:17.166 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$lMfznROV (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x7c552fe1) because module sn.messagerieae does not read unnamed module @0x7c552fe1 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:07:15.010 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 01:07:15.013 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 01:07:29.486 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 01:07:29.487 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 01:07:29.488 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 01:07:29.488 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 01:07:43.741 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:51181
+2026-03-12 01:07:43.742 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 01:07:44.318 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 01:07:48.144 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 01:08:22.529 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 01:08:22.535 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 01:08:22.935 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 01:08:23.822 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$i20d2IRW (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x6a6110d7) because module sn.messagerieae does not read unnamed module @0x6a6110d7
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-12 01:08:23.828 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$i20d2IRW (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x6a6110d7) because module sn.messagerieae does not read unnamed module @0x6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:08:23.829 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.existsByUsername(UserDAO.java:60)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.register(AuthService.java:36)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRegister(ClientHandler.java:103)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:84)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$i20d2IRW (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x6a6110d7) because module sn.messagerieae does not read unnamed module @0x6a6110d7 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:08:36.002 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : inconnu
+2026-03-12 01:08:36.002 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 01:09:04.925 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 01:09:04.926 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 01:13:26.832 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 01:13:26.833 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 01:13:26.834 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 01:13:26.834 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 01:13:35.285 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:63079
+2026-03-12 01:13:35.286 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 01:13:35.901 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 01:13:47.681 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 01:13:47.688 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 01:13:48.171 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 01:13:49.299 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$jfaqHXYH (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x3b986604) because module sn.messagerieae does not read unnamed module @0x3b986604
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.findByUsername(UserDAO.java:44)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.login(AuthService.java:57)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleLogin(ClientHandler.java:119)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:85)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-12 01:13:49.312 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.findByUsername(UserDAO.java:44)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.login(AuthService.java:57)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleLogin(ClientHandler.java:119)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:85)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$jfaqHXYH (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x3b986604) because module sn.messagerieae does not read unnamed module @0x3b986604 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:13:49.315 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.findByUsername(UserDAO.java:44)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.login(AuthService.java:57)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleLogin(ClientHandler.java:119)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:85)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$jfaqHXYH (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x3b986604) because module sn.messagerieae does not read unnamed module @0x3b986604 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:13:49.318 [Thread-1] ERROR s.messagerieae.server.ClientHandler - Erreur lors du traitement de la requête
+java.lang.NoClassDefFoundError: Could not initialize class sn.messagerieae.util.JpaUtil
+	at sn.messagerieae/sn.messagerieae.dao.UserDAO.findByUsername(UserDAO.java:44)
+	at sn.messagerieae/sn.messagerieae.service.AuthService.login(AuthService.java:57)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleLogin(ClientHandler.java:119)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.handleRequest(ClientHandler.java:85)
+	at sn.messagerieae/sn.messagerieae.server.ClientHandler.run(ClientHandler.java:67)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError: Échec JPA — [PersistenceUnit: messagerie-pu] Unable to build Hibernate SessionFactory | Cause racine : superinterface check failed: class sn.messagerieae.model.Message$HibernateProxy$jfaqHXYH (in module sn.messagerieae) cannot access class org.hibernate.proxy.ProxyConfiguration (in unnamed module @0x3b986604) because module sn.messagerieae does not read unnamed module @0x3b986604 [in thread "Thread-1"]
+	at sn.messagerieae/sn.messagerieae.util.JpaUtil.<clinit>(JpaUtil.java:18)
+	... 6 common frames omitted
+2026-03-12 01:14:11.842 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 01:14:11.843 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté

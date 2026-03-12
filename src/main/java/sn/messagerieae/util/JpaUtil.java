@@ -12,7 +12,10 @@ public class JpaUtil {
         try {
             emf = Persistence.createEntityManagerFactory("messagerie-pu");
         } catch (Exception e) {
-            throw new ExceptionInInitializerError("Échec d'initialisation de l'EntityManagerFactory : " + e.getMessage());
+            Throwable cause = e;
+            while (cause.getCause() != null) cause = cause.getCause();
+            throw new ExceptionInInitializerError(
+                "Échec JPA — " + e.getMessage() + " | Cause racine : " + cause.getMessage());
         }
     }
 

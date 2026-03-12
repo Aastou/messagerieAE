@@ -9,6 +9,7 @@ module sn.messagerieae {
 
     opens sn.messagerieae.controller to javafx.fxml;
     opens sn.messagerieae.protocol to com.google.gson;
-    //opens sn.messagerieae to javafx.fxml;
+    opens sn.messagerieae.model;
+    opens sn.messagerieae.model.enums;
     exports sn.messagerieae;
 }

@@ -101,6 +101,8 @@
 
   <build>
     <plugins>
+
+      <!-- ===== Compilation ===== -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -117,6 +119,8 @@
           </annotationProcessorPaths>
         </configuration>
       </plugin>
+
+      <!-- ===== Client JavaFX : mvn javafx:run ===== -->
       <plugin>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
@@ -125,17 +129,36 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>sn.messagerieae/sn.messagerieae.HelloApplication</mainClass>
+              <mainClass>sn.messagerieae/sn.messagerieae.MainApp</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
               <noManPages>true</noManPages>
               <stripDebug>true</stripDebug>
               <noHeaderFiles>true</noHeaderFiles>
+              <jvmArgs>
+                <jvmArg>--add-reads</jvmArg>
+                <jvmArg>sn.messagerieae=ALL-UNNAMED</jvmArg>
+              </jvmArgs>
             </configuration>
           </execution>
         </executions>
       </plugin>
+
+      <!-- ===== Serveur : mvn exec:java ===== -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <mainClass>sn.messagerieae.server.Server</mainClass>
+          <jvmArgs>
+            <jvmArg>--add-reads</jvmArg>
+            <jvmArg>sn.messagerieae=ALL-UNNAMED</jvmArg>
+          </jvmArgs>
+        </configuration>
+      </plugin>
+
     </plugins>
   </build>
 </project>
