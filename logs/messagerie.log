@@ -1604,3 +1604,2489 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
         and statut<>?
 2026-03-12 02:56:58.711 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
 2026-03-12 02:56:58.716 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 15:12:58.061 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:12:58.063 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 15:12:58.064 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 15:12:58.064 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:13:08.538 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:49685
+2026-03-12 15:13:08.539 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:13:09.181 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:13:13.986 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:49689
+2026-03-12 15:13:13.989 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:13:14.682 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:14:03.430 [Thread-2] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 15:14:03.435 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 15:14:04.092 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 15:14:07.919 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:14:08.123 [Thread-2] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:14:08.148 [Thread-2] INFO  sn.messagerieae.service.AuthService - Connexion : yaya (rôle : MEMBRE)
+2026-03-12 15:14:08.195 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:14:08.209 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:14:08.212 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:14:08.218 [Thread-2] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 15:14:08.221 [Thread-2] INFO  s.m.service.MessageService - 1 message(s) en attente livré(s) à l'utilisateur id=4
+2026-03-12 15:14:08.224 [Thread-2] INFO  s.messagerieae.server.ClientHandler - Connexion : yaya
+2026-03-12 15:14:08.228 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:14:08.333 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:14:08.434 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — yaya
+2026-03-12 15:14:08.440 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 15:14:31.379 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:14:31.541 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:14:31.552 [Thread-1] INFO  sn.messagerieae.service.AuthService - Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 15:14:31.555 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:14:31.558 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Connexion : mado
+2026-03-12 15:14:31.668 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 15:14:31.954 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — mado
+2026-03-12 15:15:04.508 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:15:04.656 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:15:04.658 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:15:04.660 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:15:04.670 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 15:15:17.303 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:15:17.309 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:15:17.372 [Thread-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 15:15:17.398 [Thread-1] INFO  s.m.service.MessageService - Message envoyé : mado → yaya (id: 4)
+2026-03-12 15:15:17.401 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 15:15:17.403 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Message : mado → yaya
+2026-03-12 15:15:21.266 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:15:21.277 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:15:21.284 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:15:21.290 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:15:21.306 [Thread-2] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 15:15:28.746 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:15:28.750 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:15:28.755 [Thread-2] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 15:15:28.766 [Thread-2] INFO  s.m.service.MessageService - Message envoyé : yaya → mado (id: 5)
+2026-03-12 15:15:28.773 [Thread-2] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 15:15:28.777 [Thread-2] INFO  s.messagerieae.server.ClientHandler - Message : yaya → mado
+2026-03-12 15:16:06.717 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:16:06.726 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:16:06.732 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 15:16:06.733 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 15:16:06.735 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : mado
+2026-03-12 15:16:06.739 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:16:06.750 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:16:06.755 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 15:16:06.757 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 15:16:06.815 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:16:06.893 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — null
+2026-03-12 15:16:13.992 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:16:17.263 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:16:17.267 [Thread-2] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:16:17.278 [Thread-2] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:16:17.279 [Thread-2] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:16:17.280 [Thread-2] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : yaya
+2026-03-12 15:16:17.281 [Thread-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:16:17.285 [Thread-2] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:16:17.288 [Thread-2] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:16:17.289 [Thread-2] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:16:17.323 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:16:17.420 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — null
+2026-03-12 15:16:20.359 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:16:30.338 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 15:16:33.220 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 15:16:42.714 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 15:16:42.715 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 15:31:06.053 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:31:06.056 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 15:31:06.057 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 15:31:06.058 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:31:12.794 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:56465
+2026-03-12 15:31:12.795 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:31:13.471 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:31:30.149 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 15:31:30.158 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 15:31:30.785 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 15:31:33.985 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:31:34.177 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:31:34.188 [Thread-1] INFO  sn.messagerieae.service.AuthService - Connexion : yaya (rôle : MEMBRE)
+2026-03-12 15:31:34.238 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:31:34.245 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Connexion : yaya
+2026-03-12 15:31:34.250 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 15:31:34.507 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — yaya
+2026-03-12 15:31:41.811 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:31:41.820 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:31:41.832 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:31:41.833 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:31:41.835 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : yaya
+2026-03-12 15:31:41.839 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:31:41.848 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:31:41.852 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:31:41.853 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:31:41.909 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:31:41.996 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — null
+2026-03-12 15:31:49.282 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:31:52.305 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 15:38:25.555 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 15:38:25.555 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 15:38:46.325 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:38:46.331 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 15:38:46.331 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 15:38:46.331 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:38:53.149 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:62832
+2026-03-12 15:38:53.152 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:38:54.207 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:39:08.640 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 15:39:08.645 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 15:39:09.064 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 15:39:11.466 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:39:11.609 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:39:11.619 [Thread-1] INFO  sn.messagerieae.service.AuthService - Connexion : yaya (rôle : MEMBRE)
+2026-03-12 15:39:11.747 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:39:11.755 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Connexion : yaya
+2026-03-12 15:39:11.763 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 15:39:12.037 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — yaya
+2026-03-12 15:39:17.598 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 15:39:17.599 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:39:17.608 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:39:17.619 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:39:17.619 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:39:17.621 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : yaya
+2026-03-12 15:39:17.623 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:39:17.632 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:39:17.635 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:39:17.636 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:39:17.703 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:39:35.503 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:53370
+2026-03-12 15:39:35.506 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:39:36.772 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:39:43.791 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:53376
+2026-03-12 15:39:43.794 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:39:44.502 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:39:56.028 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:40:10.571 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:40:10.702 [Thread-4] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:40:10.714 [Thread-4] INFO  sn.messagerieae.service.AuthService - Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 15:40:10.716 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:40:10.718 [Thread-4] INFO  s.messagerieae.server.ClientHandler - Connexion : mado
+2026-03-12 15:40:10.774 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 15:40:11.100 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — mado
+2026-03-12 15:40:13.610 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 15:40:13.610 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:40:13.618 [Thread-4] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:40:13.632 [Thread-4] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 15:40:13.632 [Thread-4] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 15:40:13.633 [Thread-4] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : mado
+2026-03-12 15:40:13.635 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:40:13.642 [Thread-4] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:40:13.645 [Thread-4] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 15:40:13.646 [Thread-4] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 15:40:13.704 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:40:21.404 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 15:40:21.411 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 15:53:58.104 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:53:58.104 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 15:53:58.111 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 15:53:58.111 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 15:54:03.637 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:63187
+2026-03-12 15:54:03.639 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:54:04.428 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:54:13.090 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 15:54:13.098 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 15:54:13.578 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 15:54:15.657 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:54:15.809 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:54:15.828 [Thread-1] INFO  sn.messagerieae.service.AuthService - Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 15:54:15.890 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:54:15.897 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Connexion : mado
+2026-03-12 15:54:15.924 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 15:54:16.215 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — mado
+2026-03-12 15:54:19.643 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    order by
+        u1_0.date_creation desc
+2026-03-12 15:55:22.913 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    order by
+        u1_0.date_creation desc
+2026-03-12 15:55:45.382 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:50079
+2026-03-12 15:55:45.384 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 15:55:46.402 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:55:54.292 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:55:54.474 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:55:54.485 [Thread-3] INFO  sn.messagerieae.service.AuthService - Connexion : yaya (rôle : MEMBRE)
+2026-03-12 15:55:54.486 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:55:54.489 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Connexion : yaya
+2026-03-12 15:55:54.653 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 15:55:55.013 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — yaya
+2026-03-12 15:55:58.825 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:55:59.054 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:55:59.087 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:55:59.094 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:55:59.118 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 15:56:08.088 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:56:08.094 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:56:08.145 [Thread-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 15:56:08.181 [Thread-3] INFO  s.m.service.MessageService - Message envoyé : yaya → mado (id: 6)
+2026-03-12 15:56:08.186 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 15:56:08.189 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Message : yaya → mado
+2026-03-12 15:56:22.894 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    order by
+        u1_0.date_creation desc
+2026-03-12 15:56:31.136 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:56:31.145 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 15:56:31.147 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:56:31.151 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 15:56:31.162 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 15:58:04.031 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 15:58:04.032 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:58:04.039 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:58:04.053 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 15:58:04.055 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 15:58:04.057 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : mado
+2026-03-12 15:58:04.060 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:58:04.068 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:58:04.073 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 15:58:04.076 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 15:58:04.187 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:58:06.038 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 15:58:06.039 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:58:06.048 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:58:06.062 [Thread-3] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:58:06.064 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:58:06.066 [Thread-3] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : yaya
+2026-03-12 15:58:06.068 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 15:58:06.077 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 15:58:06.086 [Thread-3] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 15:58:06.088 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 15:58:06.177 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 15:58:10.878 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 15:58:10.882 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 16:07:20.318 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 16:07:20.318 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 16:07:20.318 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 16:07:20.318 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 16:07:28.491 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:53346
+2026-03-12 16:07:28.493 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 16:07:29.331 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:07:38.973 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 16:07:38.982 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 16:07:39.476 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 16:07:42.753 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:07:42.923 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:07:42.943 [Thread-1] INFO  sn.messagerieae.service.AuthService - Connexion : yaya (rôle : MEMBRE)
+2026-03-12 16:07:43.144 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:07:43.151 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Connexion : yaya
+2026-03-12 16:07:43.277 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:07:44.347 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — yaya
+2026-03-12 16:07:47.445 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:53362
+2026-03-12 16:07:47.447 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 16:07:48.455 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:08:02.527 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:02.668 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:08:02.681 [Thread-3] INFO  sn.messagerieae.service.AuthService - Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 16:08:02.683 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:08:02.686 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Connexion : mado
+2026-03-12 16:08:02.785 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:08:03.189 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — mado
+2026-03-12 16:08:19.002 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:19.185 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:08:19.205 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:08:19.209 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:08:19.227 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 16:08:26.891 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:26.899 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:26.952 [Thread-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 16:08:27.009 [Thread-3] INFO  s.m.service.MessageService - Message envoyé : mado → yaya (id: 7)
+2026-03-12 16:08:27.018 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 16:08:27.023 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Message : mado → yaya
+2026-03-12 16:08:30.813 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:30.827 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:08:30.833 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:08:30.843 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:08:30.862 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 16:08:37.204 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:37.209 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:37.214 [Thread-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 16:08:37.230 [Thread-1] INFO  s.m.service.MessageService - Message envoyé : yaya → mado (id: 8)
+2026-03-12 16:08:37.237 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 16:08:37.240 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Message : yaya → mado
+2026-03-12 16:08:42.709 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    order by
+        u1_0.date_creation desc
+2026-03-12 16:08:50.511 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:50.511 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 16:08:50.529 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:08:50.543 [Thread-3] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 16:08:50.545 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 16:08:50.547 [Thread-3] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : mado
+2026-03-12 16:08:50.549 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:50.554 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:08:50.562 [Thread-3] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 16:08:50.566 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 16:08:52.493 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:52.494 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 16:08:52.504 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:08:52.519 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 16:08:52.521 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 16:08:52.523 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : yaya
+2026-03-12 16:08:52.526 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:08:52.537 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:08:52.545 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 16:08:52.546 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 16:08:54.490 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 16:08:54.490 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 16:09:04.087 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 16:09:04.089 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 16:09:04.091 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 16:09:04.091 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 16:09:09.913 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:56773
+2026-03-12 16:09:09.917 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 16:09:10.752 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:09:28.524 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 16:09:28.531 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 16:09:28.985 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 16:09:31.038 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:09:31.178 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:09:31.194 [Thread-1] INFO  sn.messagerieae.service.AuthService - Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 16:09:31.248 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:09:31.257 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Connexion : mado
+2026-03-12 16:09:31.277 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:09:31.595 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — mado
+2026-03-12 16:09:57.393 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 16:09:57.395 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:09:57.402 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:09:57.406 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 16:09:57.407 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 16:09:57.408 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : mado
+2026-03-12 16:09:57.409 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:09:57.415 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:09:57.419 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : mado
+2026-03-12 16:09:57.419 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : mado
+2026-03-12 16:09:57.489 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:10:04.443 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 16:10:33.754 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 16:10:33.756 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté
+2026-03-12 16:10:35.992 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 16:10:35.992 [main] INFO  sn.messagerieae.server.Server -   Serveur démarré sur le port 5555
+2026-03-12 16:10:35.992 [main] INFO  sn.messagerieae.server.Server -   En attente de connexions...
+2026-03-12 16:10:35.992 [main] INFO  sn.messagerieae.server.Server - ========================================
+2026-03-12 16:10:59.803 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:49907
+2026-03-12 16:10:59.805 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 16:11:00.733 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:11:03.487 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Inscription
+2026-03-12 16:11:18.050 [Thread-1] WARN  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000472: Hikari properties were encountered, but the Hikari ConnectionProvider was not found on the classpath; these properties are going to be ignored.
+2026-03-12 16:11:18.053 [Thread-1] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-03-12 16:11:18.458 [Thread-1] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-12 16:11:20.315 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        count(u1_0.id) 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:11:20.429 [Thread-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (date_creation, password, role, status, username) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 16:11:20.454 [Thread-1] INFO  sn.messagerieae.service.AuthService - Inscription réussie : astou (rôle : BENEVOLE)
+2026-03-12 16:11:20.457 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Inscription : astou
+2026-03-12 16:11:22.058 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:11:47.537 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:11:47.707 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:11:47.722 [Thread-1] INFO  sn.messagerieae.service.AuthService - Connexion : astou (rôle : BENEVOLE)
+2026-03-12 16:11:47.790 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:11:47.799 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Connexion : astou
+2026-03-12 16:11:47.807 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:11:47.934 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — astou
+2026-03-12 16:11:59.472 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:49919
+2026-03-12 16:11:59.474 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 16:12:00.290 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:12:14.385 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:12:14.519 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:12:14.522 [Thread-3] INFO  sn.messagerieae.service.AuthService - Connexion : yaya (rôle : MEMBRE)
+2026-03-12 16:12:14.523 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:12:14.526 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Connexion : yaya
+2026-03-12 16:12:14.616 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:12:15.040 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — yaya
+2026-03-12 16:12:17.542 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:12:17.706 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:12:17.722 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 16:12:25.046 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:12:25.052 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:12:25.060 [Thread-3] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 16:12:25.077 [Thread-3] INFO  s.m.service.MessageService - Message envoyé : yaya → astou (id: 9)
+2026-03-12 16:12:25.084 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 16:12:25.089 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Message : yaya → astou
+2026-03-12 16:12:48.374 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:12:48.380 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:12:48.390 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:12:48.394 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:12:48.405 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 16:13:02.428 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:02.433 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:02.437 [Thread-1] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 16:13:02.448 [Thread-1] INFO  s.m.service.MessageService - Message envoyé : astou → yaya (id: 10)
+2026-03-12 16:13:02.454 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 16:13:02.460 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Message : astou → yaya
+2026-03-12 16:13:32.674 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 16:13:32.675 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:32.685 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:13:32.699 [Thread-3] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 16:13:32.700 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 16:13:32.704 [Thread-3] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : yaya
+2026-03-12 16:13:32.706 [Thread-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:32.718 [Thread-3] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:13:32.729 [Thread-3] INFO  sn.messagerieae.service.AuthService - Déconnexion : yaya
+2026-03-12 16:13:32.731 [Thread-3] INFO  s.messagerieae.server.ClientHandler - Déconnexion : yaya
+2026-03-12 16:13:32.824 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:13:40.795 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:49933
+2026-03-12 16:13:40.795 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 16:13:40.798 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:40.911 [Thread-4] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:13:40.923 [Thread-4] INFO  sn.messagerieae.service.AuthService - Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 16:13:40.925 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        m1_0.receiver_id=? 
+        and m1_0.statut=? 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:13:40.928 [Thread-4] INFO  s.messagerieae.server.ClientHandler - Connexion : mado
+2026-03-12 16:13:40.955 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:13:41.159 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — mado
+2026-03-12 16:13:46.812 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:46.818 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:13:46.822 [Thread-4] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 16:13:51.353 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:51.358 [Thread-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:51.364 [Thread-4] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        messages
+        (contenu, date_envoi, receiver_id, sender_id, statut) 
+    values
+        (?, ?, ?, ?, ?)
+2026-03-12 16:13:51.379 [Thread-4] INFO  s.m.service.MessageService - Message envoyé : mado → astou (id: 11)
+2026-03-12 16:13:51.384 [Thread-4] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        id=?
+2026-03-12 16:13:51.389 [Thread-4] INFO  s.messagerieae.server.ClientHandler - Message : mado → astou
+2026-03-12 16:13:55.996 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:13:56.003 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:13:56.007 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:13:56.013 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:13:56.031 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 16:14:16.443 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:14:17.503 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.status=? 
+    order by
+        u1_0.username
+2026-03-12 16:16:13.434 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:16:13.443 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        m1_0.id,
+        m1_0.contenu,
+        m1_0.date_envoi,
+        m1_0.receiver_id,
+        m1_0.sender_id,
+        m1_0.statut 
+    from
+        messages m1_0 
+    where
+        (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+        or (
+            m1_0.sender_id=? 
+            and m1_0.receiver_id=?
+        ) 
+    order by
+        m1_0.date_envoi
+2026-03-12 16:16:13.447 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:16:13.453 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2026-03-12 16:16:13.464 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        messages 
+    set
+        statut=? 
+    where
+        sender_id=? 
+        and receiver_id=? 
+        and statut<>?
+2026-03-12 16:19:57.601 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Déconnecté du serveur
+2026-03-12 16:19:57.602 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:19:57.610 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:19:57.624 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : astou
+2026-03-12 16:19:57.629 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : astou
+2026-03-12 16:19:57.633 [Thread-1] WARN  s.messagerieae.server.ClientHandler - Perte de connexion pour : astou
+2026-03-12 16:19:57.635 [Thread-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:19:57.640 [Thread-1] DEBUG org.hibernate.SQL - 
+    update
+        users 
+    set
+        status=? 
+    where
+        id=?
+2026-03-12 16:19:57.646 [Thread-1] INFO  sn.messagerieae.service.AuthService - Déconnexion : astou
+2026-03-12 16:19:57.648 [Thread-1] INFO  s.messagerieae.server.ClientHandler - Déconnexion : astou
+2026-03-12 16:19:57.752 [JavaFX Application Thread] INFO  sn.messagerieae.client.SceneManager - Navigation vers : Messagerie — Connexion
+2026-03-12 16:20:05.341 [JavaFX Application Thread] INFO  sn.messagerieae.client.ClientSocket - Connecté au serveur localhost:5555
+2026-03-12 16:20:05.341 [main] INFO  sn.messagerieae.server.Server - Nouvelle connexion depuis : /127.0.0.1:57140
+2026-03-12 16:20:05.346 [Thread-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.date_creation,
+        u1_0.password,
+        u1_0.role,
+        u1_0.status,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-03-12 16:23:28.728 [Thread-0] INFO  sn.messagerieae.server.Server - Arrêt en cours...
+2026-03-12 16:23:28.733 [Thread-0] INFO  sn.messagerieae.server.Server - Serveur arrêté

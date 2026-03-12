@@ -22,6 +22,8 @@ public class ClientSocket {
     private volatile boolean connected = false;
     private String currentUsername;
     private String currentRole;
+    private String lastHost;
+    private int lastPort;
     private final List<MessageListener> listeners = new CopyOnWriteArrayList<>();
     private Runnable onDisconnect;
 
@@ -39,6 +41,8 @@ public class ClientSocket {
 
     // ===== Connexion au serveur =====
     public void connect(String host, int port) throws IOException {
+        this.lastHost = host;
+        this.lastPort = port;
         socket = new Socket(host, port);
         input = new BufferedReader(
                 new InputStreamReader(socket.getInputStream(), "UTF-8"));
@@ -132,6 +136,12 @@ public class ClientSocket {
         ProtocolMessage msg = new ProtocolMessage();
         msg.setCommand(Command.LOGOUT);
         send(msg);
+    }
+
+    public void reconnect() throws IOException {
+        if (lastHost != null) {
+            connect(lastHost, lastPort);
+        }
     }
 
     // ===== Déconnexion =====

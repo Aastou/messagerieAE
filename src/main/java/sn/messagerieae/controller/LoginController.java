@@ -17,6 +17,7 @@ public class LoginController implements MessageListener {
     @FXML private Label errorLabel;
 
     private final ClientSocket client = ClientSocket.getInstance();
+    private boolean loginPending = false;
 
     @FXML
     public void initialize() {
@@ -34,10 +35,15 @@ public class LoginController implements MessageListener {
             return;
         }
         if (!client.isConnected()) {
-            showError("Non connecté au serveur");
-            return;
+            try {
+                client.reconnect();
+            } catch (Exception e) {
+                showError("Impossible de se connecter au serveur");
+                return;
+            }
         }
         hideError();
+        loginPending = true;
         client.sendLogin(username, password);
     }
 
@@ -51,6 +57,8 @@ public class LoginController implements MessageListener {
     public void onMessage(ProtocolMessage message) {
         switch (message.getCommand()) {
             case SUCCESS -> {
+                if (!loginPending) return;
+                loginPending = false;
                 client.setCurrentUsername(message.getSender());
                 client.setCurrentRole(message.getRole());
                 client.removeListener(this);

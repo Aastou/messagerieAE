@@ -2,10 +2,14 @@ package sn.messagerieae.controller;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import sn.messagerieae.client.ClientSocket;
 import sn.messagerieae.client.MessageListener;
 import sn.messagerieae.client.SceneManager;
@@ -32,6 +36,7 @@ public class ChatController implements MessageListener {
     @FXML private HBox conversationHeader;
     @FXML private HBox inputArea;
     @FXML private Button allMembersBtn;
+    @FXML private Button sendBtn;
 
     private final ClientSocket client = ClientSocket.getInstance();
     private final Gson gson = new Gson();
@@ -51,12 +56,13 @@ public class ChatController implements MessageListener {
             allMembersBtn.setManaged(true);
         }
 
-        // RG7 : compteur de caractères
+        // RG7 : compteur de caractères + état bouton Envoyer
+        sendBtn.setDisable(true);
         messageField.textProperty().addListener((obs, o, n) -> {
             int len = n != null ? n.length() : 0;
             charCountLabel.setText(len + "/1000");
-            charCountLabel.setStyle(
-                    len > 1000 ? "-fx-text-fill: red;" : "");
+            charCountLabel.setStyle(len > 1000 ? "-fx-text-fill: red;" : "");
+            sendBtn.setDisable(n == null || n.trim().isEmpty());
         });
 
         // Sélection utilisateur
@@ -91,6 +97,7 @@ public class ChatController implements MessageListener {
         inputArea.setManaged(true);
         messagesContainer.getChildren().clear();
         messageField.clear();
+        sendBtn.setDisable(true);
         client.requestHistory(username);
     }
 
@@ -122,9 +129,11 @@ public class ChatController implements MessageListener {
     @FXML
     private void handleLogout() {
         client.removeListener(this);
+        client.setOnDisconnect(null);
         client.sendLogout();
         client.setCurrentUsername(null);
         client.setCurrentRole(null);
+        client.disconnect();
         SceneManager.switchTo("login.fxml", "Messagerie — Connexion");
     }
 
@@ -188,19 +197,59 @@ public class ChatController implements MessageListener {
     private void handleAllMembersList(ProtocolMessage msg) {
         Type listType = new TypeToken<List<Map<String, Object>>>() {}.getType();
         List<Map<String, Object>> members = gson.fromJson(msg.getExtra(), listType);
-        StringBuilder sb = new StringBuilder();
-        if (members != null) {
-            for (Map<String, Object> m : members) {
-                sb.append("• ").append(m.get("username"))
-                        .append(" — ").append(m.get("role"))
-                        .append(" (").append(m.get("status")).append(")\n");
+        if (members == null) members = List.of();
+
+        // Colonne Nom
+        TableColumn<Map<String, Object>, String> colNom = new TableColumn<>("Nom");
+        colNom.setCellValueFactory(p ->
+                new SimpleStringProperty(String.valueOf(p.getValue().get("username"))));
+
+        // Colonne Rôle
+        TableColumn<Map<String, Object>, String> colRole = new TableColumn<>("Rôle");
+        colRole.setCellValueFactory(p ->
+                new SimpleStringProperty(String.valueOf(p.getValue().get("role"))));
+
+        // Colonne Statut avec pastille colorée
+        TableColumn<Map<String, Object>, String> colStatut = new TableColumn<>("Statut");
+        colStatut.setCellValueFactory(p ->
+                new SimpleStringProperty(String.valueOf(p.getValue().get("status"))));
+        colStatut.setCellFactory(col -> new TableCell<>() {
+            @Override
+            protected void updateItem(String status, boolean empty) {
+                super.updateItem(status, empty);
+                if (empty || status == null) {
+                    setGraphic(null);
+                    return;
+                }
+                boolean online = "ONLINE".equalsIgnoreCase(status);
+                Circle dot = new Circle(5);
+                dot.setFill(online ? Color.web("#4caf50") : Color.web("#9e9e9e"));
+                Label lbl = new Label(online ? "En ligne" : "Hors ligne");
+                lbl.setStyle("-fx-font-size: 12px;");
+                HBox cell = new HBox(6, dot, lbl);
+                cell.setAlignment(Pos.CENTER_LEFT);
+                setGraphic(cell);
+                setText(null);
             }
-        }
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Liste des membres");
-        alert.setHeaderText("Total : " + (members != null ? members.size() : 0));
-        alert.setContentText(sb.toString());
-        alert.showAndWait();
+        });
+
+        TableView<Map<String, Object>> table = new TableView<>();
+        table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        table.setPrefHeight(300);
+        table.getColumns().addAll(colNom, colRole, colStatut);
+        table.setItems(FXCollections.observableArrayList(members));
+
+        Dialog<Void> dialog = new Dialog<>();
+        dialog.setTitle("Liste des membres");
+        dialog.setHeaderText("Total : " + members.size() + " membre(s)");
+        DialogPane pane = dialog.getDialogPane();
+        pane.setContent(table);
+        pane.setPrefWidth(450);
+        pane.getButtonTypes().add(ButtonType.CLOSE);
+        String css = getClass().getResource("/sn/messagerieae/styles/style.css").toExternalForm();
+        if (css != null) pane.getStylesheets().add(css);
+
+        dialog.show();
     }
 
     private void handleUserConnected(ProtocolMessage msg) {

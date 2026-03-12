@@ -84,7 +84,8 @@
                            onAction="#handleSendMessage"/>
                 <Label fx:id="charCountLabel" text="0/1000"
                        styleClass="char-count"/>
-                <Button text="Envoyer"
+                <Button fx:id="sendBtn"
+                        text="Envoyer"
                         onAction="#handleSendMessage"
                         styleClass="btn-primary"/>
             </HBox>
