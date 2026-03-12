@@ -318,3 +318,84 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 	... 6 common frames omitted
 2026-03-12 01:14:11.842 | INFO  | Arrêt en cours...
 2026-03-12 01:14:11.843 | INFO  | Serveur arrêté
+2026-03-12 02:31:27.052 | INFO  | ========================================
+2026-03-12 02:31:27.052 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 02:31:27.052 | INFO  |   En attente de connexions...
+2026-03-12 02:31:27.052 | INFO  | ========================================
+2026-03-12 02:31:37.121 | INFO  | Nouvelle connexion depuis : /127.0.0.1:56787
+2026-03-12 02:32:09.128 | INFO  | Inscription réussie : yaya (rôle : MEMBRE)
+2026-03-12 02:32:09.137 | INFO  | Inscription : yaya
+2026-03-12 02:32:35.167 | WARN  | Perte de connexion pour : inconnu
+2026-03-12 02:32:39.177 | INFO  | Arrêt en cours...
+2026-03-12 02:32:39.182 | INFO  | Serveur arrêté
+2026-03-12 02:33:40.892 | INFO  | ========================================
+2026-03-12 02:33:40.892 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 02:33:40.892 | INFO  |   En attente de connexions...
+2026-03-12 02:33:40.892 | INFO  | ========================================
+2026-03-12 02:33:48.676 | INFO  | Nouvelle connexion depuis : /127.0.0.1:62780
+2026-03-12 02:34:12.811 | INFO  | Inscription réussie : mado (rôle : ORGANISATEUR)
+2026-03-12 02:34:12.814 | INFO  | Inscription : mado
+2026-03-12 02:37:06.903 | INFO  | Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 02:37:07.041 | INFO  | Connexion : mado
+2026-03-12 02:39:13.644 | INFO  | Déconnexion : mado
+2026-03-12 02:39:13.647 | INFO  | Déconnexion : mado
+2026-03-12 02:39:13.649 | WARN  | Perte de connexion pour : mado
+2026-03-12 02:39:13.668 | INFO  | Déconnexion : mado
+2026-03-12 02:39:13.671 | INFO  | Déconnexion : mado
+2026-03-12 02:39:17.474 | INFO  | Arrêt en cours...
+2026-03-12 02:39:17.474 | INFO  | Serveur arrêté
+2026-03-12 02:39:28.000 | INFO  | ========================================
+2026-03-12 02:39:28.000 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 02:39:28.014 | INFO  |   En attente de connexions...
+2026-03-12 02:39:28.014 | INFO  | ========================================
+2026-03-12 02:39:38.810 | INFO  | Nouvelle connexion depuis : /127.0.0.1:57008
+2026-03-12 02:39:54.843 | INFO  | Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 02:39:54.945 | INFO  | Connexion : mado
+2026-03-12 02:40:08.229 | INFO  | Message envoyé : mado → fatou (id: 1)
+2026-03-12 02:40:08.230 | INFO  | Message : mado → fatou
+2026-03-12 02:40:27.084 | INFO  | Déconnexion : mado
+2026-03-12 02:40:27.085 | INFO  | Déconnexion : mado
+2026-03-12 02:40:27.087 | WARN  | Perte de connexion pour : mado
+2026-03-12 02:40:27.105 | INFO  | Déconnexion : mado
+2026-03-12 02:40:27.105 | INFO  | Déconnexion : mado
+2026-03-12 02:41:11.338 | INFO  | Nouvelle connexion depuis : /127.0.0.1:57028
+2026-03-12 02:41:19.084 | INFO  | Arrêt en cours...
+2026-03-12 02:41:19.086 | INFO  | Serveur arrêté
+2026-03-12 02:41:21.465 | INFO  | ========================================
+2026-03-12 02:41:21.466 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 02:41:21.466 | INFO  |   En attente de connexions...
+2026-03-12 02:41:21.466 | INFO  | ========================================
+2026-03-12 02:41:34.560 | INFO  | Arrêt en cours...
+2026-03-12 02:41:34.560 | INFO  | Serveur arrêté
+2026-03-12 02:41:54.339 | INFO  | ========================================
+2026-03-12 02:41:54.339 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 02:41:54.343 | INFO  |   En attente de connexions...
+2026-03-12 02:41:54.343 | INFO  | ========================================
+2026-03-12 02:42:07.457 | INFO  | Nouvelle connexion depuis : /127.0.0.1:57043
+2026-03-12 02:44:10.622 | WARN  | Perte de connexion pour : inconnu
+2026-03-12 02:46:51.956 | INFO  | Arrêt en cours...
+2026-03-12 02:46:51.960 | INFO  | Serveur arrêté
+2026-03-12 02:47:30.458 | INFO  | ========================================
+2026-03-12 02:47:30.458 | INFO  |   Serveur démarré sur le port 5555
+2026-03-12 02:47:30.458 | INFO  |   En attente de connexions...
+2026-03-12 02:47:30.458 | INFO  | ========================================
+2026-03-12 02:47:40.623 | INFO  | Nouvelle connexion depuis : /127.0.0.1:58123
+2026-03-12 02:48:47.548 | WARN  | Perte de connexion pour : inconnu
+2026-03-12 02:48:50.046 | INFO  | Nouvelle connexion depuis : /127.0.0.1:58384
+2026-03-12 02:49:07.081 | INFO  | Connexion : yaya (rôle : MEMBRE)
+2026-03-12 02:49:07.218 | INFO  | Connexion : yaya
+2026-03-12 02:49:17.543 | INFO  | Message envoyé : yaya → mado (id: 2)
+2026-03-12 02:49:17.544 | INFO  | Message : yaya → mado
+2026-03-12 02:49:28.057 | INFO  | Déconnexion : yaya
+2026-03-12 02:49:28.059 | INFO  | Déconnexion : yaya
+2026-03-12 02:49:28.060 | WARN  | Perte de connexion pour : yaya
+2026-03-12 02:49:28.075 | INFO  | Déconnexion : yaya
+2026-03-12 02:49:28.076 | INFO  | Déconnexion : yaya
+2026-03-12 02:50:44.685 | INFO  | Nouvelle connexion depuis : /127.0.0.1:49680
+2026-03-12 02:50:54.500 | INFO  | Connexion : mado (rôle : ORGANISATEUR)
+2026-03-12 02:50:54.526 | INFO  | 1 message(s) en attente livré(s) à l'utilisateur id=5
+2026-03-12 02:50:54.527 | INFO  | Connexion : mado
+2026-03-12 02:51:05.514 | INFO  | Message envoyé : mado → yaya (id: 3)
+2026-03-12 02:51:05.515 | INFO  | Message : mado → yaya
+2026-03-12 02:56:58.711 | INFO  | Arrêt en cours...
+2026-03-12 02:56:58.716 | INFO  | Serveur arrêté

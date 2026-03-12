@@ -1,8 +1,10 @@
 package sn.messagerieae.controller;
 
+import javafx.animation.PauseTransition;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.util.Duration;
 import sn.messagerieae.client.ClientSocket;
 import sn.messagerieae.client.MessageListener;
 import sn.messagerieae.client.SceneManager;
@@ -72,10 +74,16 @@ public class RegisterController implements MessageListener {
     public void onMessage(ProtocolMessage message) {
         switch (message.getCommand()) {
             case SUCCESS -> {
-                showSuccess("Inscription réussie !");
+                showSuccess("Inscription réussie ! Redirection...");
                 usernameField.clear();
                 passwordField.clear();
                 confirmPasswordField.clear();
+                PauseTransition pause = new PauseTransition(Duration.seconds(1.5));
+                pause.setOnFinished(e -> {
+                    client.removeListener(this);
+                    SceneManager.switchTo("login.fxml", "Messagerie — Connexion");
+                });
+                pause.play();
             }
             case ERROR -> showError(message.getContent());
             default -> {}
