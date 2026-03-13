@@ -8,7 +8,11 @@ import javafx.util.Duration;
 import sn.messagerieae.client.ClientSocket;
 import sn.messagerieae.client.MessageListener;
 import sn.messagerieae.client.SceneManager;
+import sn.messagerieae.model.enums.Role;
 import sn.messagerieae.protocol.ProtocolMessage;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class RegisterController implements MessageListener {
 
@@ -25,7 +29,9 @@ public class RegisterController implements MessageListener {
     public void initialize() {
         client.addListener(this);
         roleComboBox.setItems(FXCollections.observableArrayList(
-                "MEMBRE", "BENEVOLE", "ORGANISATEUR"));
+                Arrays.stream(Role.values())
+                      .map(Role::name)
+                      .collect(Collectors.toList())));
         roleComboBox.getSelectionModel().selectFirst();
     }
 
